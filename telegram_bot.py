@@ -1,18 +1,16 @@
-"""
-telegram_bot.py
----------------
-Envia o resumo mensal de despesas para o Telegram.
-Corre automaticamente no dia 1 de cada mês via GitHub Actions.
-"""
-
-import requests
 import os
-from excel_manager import obter_resumo_mes_anterior
+import requests
+from sheets_manager import obter_resumo_mes_anterior
 
-# credenciais do Telegram
+try:
+    from config import TELEGRAM_TOKEN, TELEGRAM_CHAT_ID
+    os.environ["TELEGRAM_TOKEN"] = TELEGRAM_TOKEN
+    os.environ["TELEGRAM_CHAT_ID"] = TELEGRAM_CHAT_ID
+except ImportError:
+    pass
+
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
-
 
 def enviar_mensagem(texto: str) -> bool:
     """
