@@ -10,8 +10,8 @@ import os
 from excel_manager import obter_resumo_mes_anterior
 
 # credenciais do Telegram
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "8788149551:AAHkaZ41APciRs8lMIVBGk8BFNZozxGjWcc")
-TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "5898541746")
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 
 
 def enviar_mensagem(texto: str) -> bool:
