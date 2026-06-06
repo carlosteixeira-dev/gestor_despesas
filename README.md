@@ -5,17 +5,29 @@ Dashboard para registar e monitorizar despesas mensais, com sincronização auto
 ---
 
 ## 📁 Estrutura do projeto
+
 gestor_despesas/
+
 ├── main.py              # Ponto de entrada
+
 ├── dashboard.py         # Interface gráfica (CustomTkinter)
+
 ├── excel_manager.py     # Guarda despesas no Excel local
+
 ├── sheets_manager.py    # Sincroniza com Google Sheets
+
 ├── telegram_bot.py      # Envia resumo para o Telegram
+
 ├── config.py            # Configurações (não vai para o GitHub)
+
 ├── requirements.txt     # Dependências
+
 └── .github/
+
 └── workflows/
+
 └── resumo_mensal.yml  # Envia resumo no dia 1 de cada mês
+
 
 ---
 
